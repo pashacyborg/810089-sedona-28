@@ -1,0 +1,442 @@
+/*Стили для главной страницы*/
+
+body {
+  min-width: 1200px;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main_navigation {
+  display: flex;
+
+  width: 100%;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main_header_logo {
+  order: -2;
+}
+
+.main_navigation_list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 1200px;
+}
+
+.main_navigation_list li:first-child {
+  order: -4;
+}
+
+.main_navigation_list li:nth-child(2) {
+  order: -3;
+}
+
+.main_navigation_list li:nth-child(3) {
+  order: -1;
+}
+
+
+.main_navigation_list a {
+  color: #000000;
+}
+
+.main_navigation_selected a {
+  color: #766357;
+}
+
+.main_navigation_list a:hover,
+.main_navigation_list a:focus {
+  color: #8bb9d5;
+}
+
+.main_navigation_selected a:hover,
+.main_navigation_selected a:focus {
+  color: #766357;
+}
+
+.main_navigation_list a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.entry {
+  margin-bottom: 51px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.welcome_to_sedona {
+  padding-top: 176px;
+  min-height: 508px;
+
+  background-color: #81b3d2;
+  background-image: url("../img/polygon.svg"),
+                    url("../img/background_index.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.main_heading_index {
+  padding-top: 62px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.entry p {
+  font-size: 14px;
+}
+
+.advantages {
+  margin-bottom: 55px;
+}
+
+.advantages_housing_list,
+.advantages_tourism_list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.advantages_housing_item,
+.advantages_tourism_item {
+  box-sizing: border-box;
+  flex-basis: 400px;
+  text-align: center;
+}
+
+.advantages_housing_item {
+  min-height: 256px;
+  outline: 2px dashed rgba(0, 128, 0, 0.2);
+}
+
+.advantages_housing_item:first-child,
+.advantages_tourism_item:not(:first-child) {
+  padding-top: 47px;
+}
+
+.advantages_housing_item:nth-child(2) ~ li {
+  padding-top: 160px;
+  min-height: 330px;
+}
+
+
+.advantages_housing_item h3,
+.advantages_housing_item b,
+.advantages_tourism_item h3 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.advantages_housing_image {
+  flex-basis: 800px;
+  background-image: url("../img/advantages_housing_img.jpg");
+  background-position: center;
+}
+
+.advantages_tourism_item {
+  min-height: 256px;
+  outline: 2px dashed red;
+}
+
+.advantages_tourism_item.gray {
+  background-color: #eeeeee;
+}
+
+.advantages_tourism_image {
+  flex-basis: 800px;
+  background-image: url("..img/advantages_tourism_img.jpg");
+  background-position: center;
+}
+
+.hotel_search_preview {
+  text-align: center;
+  margin-top: 0;
+  outline: 2px dashed blue;
+}
+
+.hotel_search_preview b {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+}
+
+.hotel_search_preview p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #eeeeee;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #766357;
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #604e43;
+}
+
+.button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.main_footer {
+  line-height: 26px;
+  color: #000000;
+}
+
+.hashtag {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.social_networks_list {
+  text-align: center;
+  list-style: none;
+}
+
+.footer-copyright span {
+  font-size: 14px;
+}
+
+.modal_search {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+}
+
+.modal_search input {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.modal_search input:hover {
+  background-color: #ebebeb;
+}
+
+.modal_search input:focus {
+  background-color: #ffffff;
+}
+
+.hotel_search {
+  font-size: 21px;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+
+  background-color: #81b3d2;
+}
+
+.hotel_search:hover,
+.hotel_search:focus {
+  background-color: #669ec0;
+}
+
+.hotel_search:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.main_footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+
+}
+
+.social_networks_list {
+  background-color: #81b3d2;
+}
+
+/*Стили для внутренней страницы*/
+
+.inner_page {
+  color: #000000;
+
+  background-color: #fefefe;
+
+}
+
+.filter {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  background-image: url("../img/background_hotels.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.filter fieldset {
+  border: none;
+}
+
+.filter legend{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+.sort_type_list,
+.sort_type_list_2 {
+  list-style: none;
+}
+
+.number_of_hotels {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.sorting_label,
+.sort_type_list a {
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sort_type_list a {
+  text-decoration: underline dotted;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sort_type_list .sort_type_list_selected {
+  text-decoration: none;
+  color: #81b3d2;
+}
+
+.sort_type_list a:hover:not(.sort_type_list_selected),
+.sort_type_list a:focus:not(.sort_type_list_selected) {
+  color: #81b3d2;
+}
+
+.sort_type_list a:active:not(.sort_type_list_selected) {
+  color: #000000;
+}
+
+.sort_type_list_2 a {
+  color: #cacaca;
+}
+
+.sort_type_list_2 .sort_type_list_2_selected {
+  color: #81b3d2;
+}
+
+.sort_type_list_2 a:hover:not(.sort_type_list_2_selected),
+.sort_type_list_2 a:focus:not(.sort_type_list_2_selected) {
+  color: #231f20;
+}
+
+.sort_type_list_2 a:active:not(.sort_type_list_2_selected) {
+  color: #81b3d2;
+}
+
+.catalog_list {
+  list-style: none;
+}
+
+.catalog h3 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.catalog h3:hover,
+.catalog h3:focus {
+  color: #81b3d2;
+}
+
+.catalog h3:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog_item_info {
+  color: #333333;
+}
+
+.rating {
+  color: #666666;
+}
+
+.more_information,
+.hotel_reservation {
+  color: #ffffff;
+  font-weight: 700;
+
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.more_information {
+  background-color: #81b3d2;
+}
+
+.hotel_reservation {
+  background-color: #766357;
+}
+
+.more_information:hover,
+.more_information:focus {
+  background-color: #669ec0;
+}
+
+.hotel_reservation:hover,
+.hotel_reservation:focus {
+  background-color: #604e43
+}
+
+.more_information:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.hotel_reservation:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}

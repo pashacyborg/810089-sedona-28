@@ -2,11 +2,142 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>City of Sedona</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header class="main_header container">
+      <nav class="main_navigation">
+        <a class="main_header_logo" href="index.html">
+          <img src="img/main_logo.svg" width="140" height="72" alt="Логотип города «Седона»">
+        </a>
+        <ul class="main_navigation_list">
+          <li class="main_navigation_selected"><a href="index.html">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#>">Карта штата</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main_content_index container">
+      <div class="entry">
+        <p class="welcome_to_sedona">
+          <img src="img/welcome.png" width="459" height="353" alt="Надпись «Добро пожаловать в Седону»">
+        </p>
+        <h1 class="main_heading_index">Седона - небольшой городок в Аризоне,
+          заслуживающий большего!</h1>
+        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </div>
+      <section class="advantages">
+        <h2 class="visually-hidden">Преимущества</h2>
+        <div class="advantages_housing">
+          <ul class="advantages_housing_list">
+            <li class="advantages_housing_item">
+              <h3>Настоящий городок</h3><br>
+              <span>№1</span>
+              <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            </li>
+            <li class="advantages_housing_item advantages_housing_image">
+            </li>
+            <li class="advantages_housing_item">
+              <b>Жильё</b>
+              <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+            </li>
+            <li class="advantages_housing_item">
+              <b>Еда</b>
+              <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+            <li class="advantages_housing_item">
+              <b>Сувениры</b>
+              <p>Не только китайского, но и местного производства!</p>
+            </li>
+          </ul>
+        </div>
+        <div class="advantages_tourism">
+          <ul class="advantages_tourism_list">
+            <li class="advantages_tourism_item advantages_tourism_image">
+            </li>
+            <li class="advantages_tourism_item">
+              <h3>Там есть<br>
+                  мост дьявола</h3>
+              <span>№2</span>
+              <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </li>
+            <li class="advantages_tourism_item gray">
+              <h3>Небольшая площадь</h3><br>
+              <span>№3</span>
+              <p>Все достопримечательности находятся очень близко</p>
+            </li>
+            <li class="advantages_tourism_item gray">
+              <h3>Красивая дорога</h3><br>
+              <span>№4</span>
+              <p>Ехать В Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li class="advantages_tourism_item gray">
+              <h3>Мало туристов</h3><br>
+              <span>№5</span>
+              <p>Большинство едет в Гранд-каньон и толпится там</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="hotel_search_preview">
+        <b>Заинтересовались?</b>
+        <p>Укажите предполагаемые даты поездки,<br>
+           и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="button" type="button">Поиск гостиницы в седоне</button>
+      </div>
+      <section class="modal modal_search">
+        <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <fieldset name="search_forms">
+            <legend>Поиск гостиницы в Седоне</legend>
+            <p class="whole_field">
+              <label for="arrival_date_field">Дата заезда:</label>
+              <input type="text" name="arrival_date" id="arrival_date_field" value="24 апреля 2017">
+            </p>
+            <p class="whole_field">
+              <label for="departure_date_field">Дата выезда:</label>
+              <input type="text" name="departure_date" id="departure_date_field" value="4 июля 2017">
+            </p>
+            <p class="one_third_whole">
+              <label for="amount_of_children_field">Дети:</label>
+              <input type="number" name="amount_of_children" id="amount_of_children_field" value="2" aria-label="Количество детей">
+            </p>
+            <p class="one_third_whole">
+              <label for="amount_of_adult_field">Взрослые:</label>
+              <input type="number" name="amount_of_adult" id="amount_of_adult_field" value="0" aria-label="Количество взрослых">
+            </p>
+            <button type="submit" class="hotel_search">Найти</button>
+          </fieldset>
+        </form>
+      </section>
+      <section class="modal modal_map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <p class="hotel_search_map">
+          <img src="img/map.jpg" width="1718" height="748" alt="Наше местоположение: от Флагстаффа вниз по трассе 89а">
+        </p>
+      </section>
+    </main>
+    <footer class="main_footer container">
+      <p class="hashtag">#visitsedona</p>
+      <ul class="social_networks_list">
+        <li>
+          <a class="social twitter" href="#" aria-label="Folow us on Twitter"><svg class="twitter_logo"></svg></a>
+        </li>
+        <li>
+          <a class="social facebook" href="#" aria-label="Folow us on Facebook"><svg class="facebook_logo"></svg></a>
+        </li>
+        <li>
+          <a class="social youtube" href="#" aria-label="Folow us on YouTube"><svg class="youtube_logo"></svg></a>
+        </li>
+      </ul>
+      <p class="footer-copyright">
+        <span>website by</span>
+        <a class="developer_site_link"><svg class="developer_site_logo"></svg></a>
+      </p>
+    </footer>
   </body>
 </html>
