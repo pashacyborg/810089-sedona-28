@@ -13,7 +13,7 @@ body {
   color: #333333;
   text-transform: uppercase;
 
-  background-color: #ffffff;
+  background-color: #f2f2f2;
   background-position: top center;
   background-repeat: no-repeat;
 }
@@ -26,12 +26,27 @@ a {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #ffffff;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
 }
 
 .main_navigation {
-  display: flex;
-
-  width: 100%;
+  position: relative;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -40,28 +55,28 @@ a {
 }
 
 .main_header_logo {
-  order: -2;
+  position: absolute;
+  left: 543px;
 }
 
 .main_navigation_list {
   display: flex;
   justify-content: space-around;
+  width: 100%;
+  min-height: 56px;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  width: 1200px;
+
 }
 
-.main_navigation_list li:first-child {
-  order: -4;
+.main_navigation_list li {
+  margin: auto 0;
 }
 
 .main_navigation_list li:nth-child(2) {
-  order: -3;
+  margin-right: 200px;
 }
-
-.main_navigation_list li:nth-child(3) {
-  order: -1;
-}
-
 
 .main_navigation_list a {
   color: #000000;
@@ -93,12 +108,13 @@ a {
 
 .welcome_to_sedona {
   padding-top: 176px;
+  margin: 0;
   min-height: 508px;
 
   background-color: #81b3d2;
   background-image: url("../img/polygon.svg"),
                     url("../img/background_index.jpg");
-  background-position: top center;
+  background-position: bottom center;
   background-repeat: no-repeat;
 }
 
@@ -124,6 +140,7 @@ a {
   width: 1200px;
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -161,8 +178,8 @@ a {
 
 .advantages_housing_image {
   flex-basis: 800px;
-  background-image: url("../img/advantages_housing_img.jpg");
-  background-position: center;
+  height: 256px;
+  overflow: hidden;
 }
 
 .advantages_tourism_item {
@@ -176,8 +193,8 @@ a {
 
 .advantages_tourism_image {
   flex-basis: 800px;
-  background-image: url("..img/advantages_tourism_img.jpg");
-  background-position: center;
+  height: 256px;
+  overflow: hidden;
 }
 
 .hotel_search_preview {
@@ -219,30 +236,22 @@ a {
   background-color: #503e33;
 }
 
-.main_footer {
-  line-height: 26px;
-  color: #000000;
-}
-
-.hashtag {
-  font-size: 21px;
-  font-weight: 700;
-}
-
-.social_networks_list {
-  text-align: center;
-  list-style: none;
-}
-
-.footer-copyright span {
-  font-size: 14px;
-}
-
 .modal_search {
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
   color: #000000;
+}
+
+.modal_search form {
+  width: 450px;
+  margin: 0 auto;
+  padding: 55px;
+  outline: 2px dashed black;
+}
+
+.modal_search fieldset {
+  border: none;
 }
 
 .modal_search input {
@@ -287,20 +296,35 @@ a {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  line-height: 26px;
+  color: #000000;
+}
 
-
+.hashtag {
+  font-size: 21px;
+  font-weight: 700;
 }
 
 .social_networks_list {
+  display: flex;
+  text-align: center;
+  list-style: none;
+}
+
+.social_networks_list li {
+  margin-left: 6px;
   background-color: #81b3d2;
 }
 
+.footer-copyright span {
+  font-size: 14px;
+}
 /*Стили для внутренней страницы*/
 
 .inner_page {
   color: #000000;
 
-  background-color: #fefefe;
+  background-color: #f2f2f2;
 
 }
 
@@ -313,8 +337,20 @@ a {
   background-repeat: no-repeat;
 }
 
+.filter form {
+  display: flex;
+  min-height: 217px;
+}
+
 .filter fieldset {
   border: none;
+  width: 145px;
+  margin: auto 0;
+}
+
+.filter fieldset:last-child {
+  width: 330px;
+  margin-left: auto;
 }
 
 .filter legend{
@@ -322,10 +358,23 @@ a {
   font-weight: 700;
 }
 
+.sort_type {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  height: 86px;
+  padding-top: 30px;
+}
 
 .sort_type_list,
 .sort_type_list_2 {
+  display: flex;
   list-style: none;
+
+}
+
+.sort_type_list_2 {
+  background-color: red;
 }
 
 .number_of_hotels {
