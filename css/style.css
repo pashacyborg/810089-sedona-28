@@ -29,6 +29,7 @@ a {
   background-color: #ffffff;
 }
 
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -56,12 +57,13 @@ input[type="radio"].visually-hidden {
 
 .main_header_logo {
   position: absolute;
-  left: 543px;
+  left: 50%;
+  margin-left: -70px;
 }
 
 .main_navigation_list {
   display: flex;
-  justify-content: space-around;
+
   width: 100%;
   min-height: 56px;
   padding: 0;
@@ -74,8 +76,28 @@ input[type="radio"].visually-hidden {
   margin: auto 0;
 }
 
+.main_navigation_list li:first-child {
+  width: 240px;
+  margin-left: 72px;
+  text-align: left;
+}
+
 .main_navigation_list li:nth-child(2) {
-  margin-right: 200px;
+  width: 218px;
+  text-align: left;
+}
+
+.main_navigation_list li:nth-child(3) {
+  width: 218px;
+  margin-left: 140px;
+  text-align: right;
+}
+
+.main_navigation_list li:last-child {
+  width: 240px;
+  margin-right: 72px;
+  text-align: right;
+
 }
 
 .main_navigation_list a {
@@ -85,6 +107,8 @@ input[type="radio"].visually-hidden {
 .main_navigation_selected a {
   color: #766357;
 }
+
+
 
 .main_navigation_list a:hover,
 .main_navigation_list a:focus {
@@ -237,6 +261,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal_search {
+  position: relative;
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
@@ -244,10 +269,14 @@ input[type="radio"].visually-hidden {
 }
 
 .modal_search form {
+  position: absolute;
+  left: 50%;
   width: 450px;
-  margin: 0 auto;
+  min-height: 285px;
+  margin-left: -288px;
   padding: 55px;
   outline: 2px dashed black;
+  background-color: #ffffff;
 }
 
 .modal_search fieldset {
@@ -292,15 +321,21 @@ input[type="radio"].visually-hidden {
   background-color: #5496bd;
 }
 
+.hotel_search_map {
+  margin: 0;
+}
+
 .main_footer {
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
+  align-items: center;
   line-height: 26px;
   color: #000000;
 }
 
 .hashtag {
+  width: 241px;
+  margin-left: 72px;
   font-size: 21px;
   font-weight: 700;
 }
@@ -316,8 +351,21 @@ input[type="radio"].visually-hidden {
   background-color: #81b3d2;
 }
 
+.footer-copyright {
+  width: 241px;
+  margin: 0px;
+  margin-right: 72px;
+  min-height: 48px;
+  text-align: right;
+
+}
+
 .footer-copyright span {
   font-size: 14px;
+}
+
+.footer-copyright a {
+  background-color: red;
 }
 /*Стили для внутренней страницы*/
 
@@ -344,13 +392,23 @@ input[type="radio"].visually-hidden {
 
 .filter fieldset {
   border: none;
-  width: 145px;
   margin: auto 0;
+  padding: 0;
+}
+
+.filter fieldset:first-child {
+  width: 241px;
+  margin-left: 72px;
+}
+
+.filter fieldset:nth-child(2) {
+  width: 288px;
 }
 
 .filter fieldset:last-child {
-  width: 330px;
+  width: 328px;
   margin-left: auto;
+  margin-right: 72px;
 }
 
 .filter legend{
@@ -360,27 +418,42 @@ input[type="radio"].visually-hidden {
 
 .sort_type {
   display: flex;
-  justify-content: space-around;
-  box-sizing: border-box;
-  height: 86px;
-  padding-top: 30px;
+  margin-top: 31px;
+  margin-bottom: 34px;
+
 }
 
 .sort_type_list,
 .sort_type_list_2 {
   display: flex;
   list-style: none;
+  padding: 0;
+  margin: 0;
 
 }
 
 .sort_type_list_2 {
   background-color: red;
+  width: 130px;
+  height: 20px;
+
+  margin-right: 72px;
 }
 
+
 .number_of_hotels {
+  width: 135px;
+  margin-left: 72px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.sorting_unit {
+  display: flex;
+  flex-grow: 1;
+  width: 593px;
+  margin-left: 28px;
 }
 
 .sorting_label,
@@ -426,10 +499,28 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog_list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 72px;
+  margin: 0;
   list-style: none;
 }
 
+.catalog_list li {
+  display: flex;
+  margin: 30px 0;
+}
+
+.catalog_item a {
+
+}
+
+.catalog_item_image {
+  margin: 0;
+}
+
 .catalog h3 {
+  margin: 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -446,11 +537,20 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog_item_info {
+  display: flex;
+  flex-direction: column;
+  width: 566px;
+  min-height: 90px;
+  margin-left: 28px;
   color: #333333;
 }
 
 .rating {
+  align-self: flex-end;
+  width: 130px;
+  margin-left: auto;
   color: #666666;
+  text-align: right;
 }
 
 .more_information,
