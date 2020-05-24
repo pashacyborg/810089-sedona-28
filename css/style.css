@@ -29,7 +29,6 @@ a {
   background-color: #ffffff;
 }
 
-
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -63,39 +62,34 @@ input[type="radio"].visually-hidden {
 
 .main_navigation_list {
   display: flex;
-
+  flex-wrap: wrap;
+  box-sizing: border-box;
   width: 100%;
   min-height: 56px;
-  padding: 0;
+  padding: 0 72px;
   margin: 0;
   list-style: none;
 
 }
-
 .main_navigation_list li {
   margin: auto 0;
+  width: 229px;
 }
 
 .main_navigation_list li:first-child {
-  width: 240px;
-  margin-left: 72px;
   text-align: left;
 }
 
 .main_navigation_list li:nth-child(2) {
-  width: 218px;
   text-align: left;
 }
 
 .main_navigation_list li:nth-child(3) {
-  width: 218px;
   margin-left: 140px;
   text-align: right;
 }
 
 .main_navigation_list li:last-child {
-  width: 240px;
-  margin-right: 72px;
   text-align: right;
 
 }
@@ -125,7 +119,6 @@ input[type="radio"].visually-hidden {
 }
 
 .entry {
-  margin-bottom: 51px;
   line-height: 26px;
   text-align: center;
 }
@@ -143,18 +136,26 @@ input[type="radio"].visually-hidden {
 }
 
 .main_heading_index {
-  padding-top: 62px;
+  margin: 0;
+  padding-top: 65px;
+  padding-bottom: 33px;
+  padding-left: 380px;
+  padding-right: 380px;
   font-size: 21px;
   font-weight: 700;
   color: #000000;
 }
 
 .entry p {
+  margin: 0;
   font-size: 14px;
 }
 
+.entry p:last-child {
+  padding-bottom: 57px;
+}
+
 .advantages {
-  margin-bottom: 55px;
 }
 
 .advantages_housing_list,
@@ -177,12 +178,31 @@ input[type="radio"].visually-hidden {
 
 .advantages_housing_item {
   min-height: 256px;
-  outline: 2px dashed rgba(0, 128, 0, 0.2);
+}
+
+.advantages_housing_item:first-child {
+  padding-left: 59px;
+  padding-right: 59px;
+}
+
+.advantages_housing_item:nth-child(3) {
+  padding-left: 73px;
+  padding-right: 73px;
+}
+
+.advantages_housing_item:nth-child(4) {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+.advantages_housing_item:nth-child(5) {
+  padding-left: 63px;
+  padding-right: 63px;
 }
 
 .advantages_housing_item:first-child,
 .advantages_tourism_item:not(:first-child) {
-  padding-top: 47px;
+  padding-top: 48px;
 }
 
 .advantages_housing_item:nth-child(2) ~ li {
@@ -190,6 +210,10 @@ input[type="radio"].visually-hidden {
   min-height: 330px;
 }
 
+.advantages_housing_item:first-child h3,
+.advantages_tourism_item:not(:first-child) h3 {
+  padding-bottom: 30px;
+}
 
 .advantages_housing_item h3,
 .advantages_housing_item b,
@@ -200,6 +224,13 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.advantages_housing_item p,
+.advantages_housing_item h3,
+.advantages_tourism_item p,
+.advantages_tourism_item h3 {
+  margin: 0;
+}
+
 .advantages_housing_image {
   flex-basis: 800px;
   height: 256px;
@@ -208,7 +239,26 @@ input[type="radio"].visually-hidden {
 
 .advantages_tourism_item {
   min-height: 256px;
-  outline: 2px dashed red;
+}
+
+.advantages_tourism_item:nth-child(2) {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.advantages_tourism_item:nth-child(3) {
+  padding-left: 94px;
+  padding-right: 94px;
+}
+
+.advantages_tourism_item:nth-child(4) {
+  padding-left: 68px;
+  padding-right: 68px;
+}
+
+.advantages_tourism_item:nth-child(5) {
+  padding-left: 76px;
+  padding-right: 76px;
 }
 
 .advantages_tourism_item.gray {
@@ -224,16 +274,19 @@ input[type="radio"].visually-hidden {
 .hotel_search_preview {
   text-align: center;
   margin-top: 0;
-  outline: 2px dashed blue;
+  padding-top: 55px;
 }
 
 .hotel_search_preview b {
+  padding-bottom: 35px;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
 }
 
 .hotel_search_preview p {
+  margin: 0;
+  padding-bottom: 50px;
   font-size: 14px;
   line-height: 24px;
 }
@@ -271,11 +324,11 @@ input[type="radio"].visually-hidden {
 .modal_search form {
   position: absolute;
   left: 50%;
-  width: 450px;
-  min-height: 285px;
+  box-sizing: border-box;
+  width: 576px;
+  min-height: 395px;
   margin-left: -288px;
   padding: 55px;
-  outline: 2px dashed black;
   background-color: #ffffff;
 }
 
@@ -322,6 +375,8 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel_search_map {
+  height: 471px;
+  overflow: hidden;
   margin: 0;
 }
 
@@ -331,9 +386,14 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.contact_us {
+  box-sizing: border-box;
+  width: 400px;
+  text-align: left;
+  padding-left: 132px;
+}
+
 .hashtag {
-  width: 241px;
-  margin-left: 72px;
   font-size: 21px;
   font-weight: 700;
 }
@@ -343,7 +403,7 @@ input[type="radio"].visually-hidden {
   justify-content: center;
   align-items: center;
   width: 400px;
-  margin: 0 88px;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -354,9 +414,10 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-copyright {
-  width: 241px;
+  box-sizing: border-box;
+  width: 400px;
+  padding-right: 101px;
   margin: 0px;
-  margin-right: 72px;
   min-height: 48px;
   text-align: right;
 
@@ -389,7 +450,11 @@ input[type="radio"].visually-hidden {
 
 .filter form {
   display: flex;
+  box-sizing: border-box;
+  width: 100%;
   min-height: 217px;
+  padding-left: 72px;
+  padding-right: 72px;
 }
 
 .filter fieldset {
@@ -400,7 +465,6 @@ input[type="radio"].visually-hidden {
 
 .filter fieldset:first-child {
   width: 241px;
-  margin-left: 72px;
 }
 
 .filter fieldset:nth-child(2) {
@@ -410,7 +474,6 @@ input[type="radio"].visually-hidden {
 .filter fieldset:last-child {
   width: 328px;
   margin-left: auto;
-  margin-right: 72px;
 }
 
 .filter legend{
@@ -420,14 +483,16 @@ input[type="radio"].visually-hidden {
 
 .sort_type {
   display: flex;
-  margin-top: 31px;
-  margin-bottom: 34px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 31px 72px 34px 72px;
 
 }
 
 .sort_type_list,
 .sort_type_list_2 {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -438,14 +503,11 @@ input[type="radio"].visually-hidden {
   background-color: red;
   width: 130px;
   height: 20px;
-
-  margin-right: 72px;
 }
 
 
 .number_of_hotels {
   width: 135px;
-  margin-left: 72px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -502,6 +564,8 @@ input[type="radio"].visually-hidden {
 
 .catalog_list {
   display: flex;
+  box-sizing: border-box;
+  width: 100%;
   flex-direction: column;
   padding: 0 72px;
   margin: 0;
