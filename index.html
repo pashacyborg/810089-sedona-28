@@ -26,7 +26,7 @@
         <p class="welcome_to_sedona">
           <img src="img/welcome.png" width="459" height="353" alt="Надпись «Добро пожаловать в Седону»">
         </p>
-        <h1 class="main_heading_index">Седона - небольшой городок в Аризоне,
+        <h1 class="main_heading_index">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</h1>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
@@ -93,12 +93,12 @@
       </div>
       <section class="modal modal_search">
         <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form class="modal_search_form" action="https://echo.htmlacademy.ru" method="post">
           <legend class="visually-hidden">Поиск гостиницы в Седоне</legend>
-          <p class="search_item whole_field">
+          <div class="search_item whole_field">
             <label for="arrival_date_field">Дата заезда:</label>
-            <input type="text" name="arrival_date" id="arrival_date_field" value="24 апреля 2017">
-            <button class="open_calendar" type="button">
+            <input type="text" name="arrival_date" id="arrival_date_field" placeholder="24 апреля 2017">
+            <button class="open_calendar" type="button" aria-label="открыть календарь">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
               <g id="calendar_1_">
@@ -121,11 +121,11 @@
               </g>
               </svg>
             </button>
-          </p>
-          <p class="search_item whole_field">
+          </div>
+          <div class="search_item whole_field">
             <label for="departure_date_field">Дата выезда:</label>
-            <input type="text" name="departure_date" id="departure_date_field" value="4 июля 2017">
-            <button class="open_calendar" type="button">
+            <input type="text" name="departure_date" id="departure_date_field" placeholder="4 июля 2017">
+            <button class="open_calendar" type="button" aria-label="открыть календарь">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
               <g id="calendar_1_">
@@ -148,15 +148,23 @@
               </g>
               </svg>
             </button>
-          </p>
-          <p class="search_item one_third_whole">
+          </div>
+          <div class="search_item one_third_whole">
             <label for="amount_of_adult_field">Взрослые:</label>
-            <input type="number" name="amount_of_adult" id="amount_of_adult_field" value="0" aria-label="Количество взрослых">
-          </p>
-          <p class="search_item one_third_whole">
+            <div class="one_third_whole_field">
+              <button class="less visually-hidden" type="button"></button>
+              <input type="number" name="amount_of_adult" id="amount_of_adult_field" placeholder="0" aria-label="Количество взрослых">
+              <button class="more visually-hidden" type="button"></button>
+            </div>
+          </div>
+          <div class="search_item one_third_whole">
             <label for="amount_of_children_field">Дети:</label>
-            <input type="number" name="amount_of_children" id="amount_of_children_field" value="2" aria-label="Количество детей">
-          </p>
+            <div class="one_third_whole_field">
+              <button class="less visually-hidden" type="button"></button>
+              <input type="number" name="amount_of_children" id="amount_of_children_field" placeholder="2" aria-label="Количество детей">
+              <button class="more visually-hidden" type="button"></button>
+            </div>
+          </div>
           <button type="submit" class="button hotel_search">Найти</button>
         </form>
       </section>
