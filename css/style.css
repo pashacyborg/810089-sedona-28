@@ -434,6 +434,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal_search_form .one_third_whole_field {
+  position: relative;
   box-sizing: border-box;
   width: 114px;
   padding-top: 6px;
@@ -480,6 +481,23 @@ input[type="radio"].visually-hidden {
   width: 36px;
   min-height: 26px;
   text-align: center;
+}
+
+.one_third_whole_field .less {
+  position: absolute;
+  left: 0;
+  width: 12px;
+  height: 3px;
+  border: none;
+  background-image: url("../img/Rectangle.svg");
+}
+
+.one_third_whole_field .less:hover {
+  fill: #000000;
+}
+
+.one_third_whole_field .less:active {
+  fill: #81B3D2;
 }
 
 .open_calendar {
