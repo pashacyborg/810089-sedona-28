@@ -584,7 +584,7 @@ input[type="radio"].visually-hidden {
   align-items: center;
   box-sizing: border-box;
   width: 400px;
-  padding-left: 72px;
+  padding-left: 73px;
 
 }
 
@@ -684,7 +684,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: center;
   width: 400px;
-  padding-right: 72px;
+  padding-right: 73px;
   margin: 0px;
   min-height: 48px;
 
@@ -930,7 +930,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 31px 72px 34px 72px;
+  min-height: 87px;
+  padding: 0 73px;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -941,26 +942,32 @@ input[type="radio"].visually-hidden {
   list-style: none;
   padding: 0;
   margin: 0;
+}
 
+.sort_type_list {
+  width: 620px;
+  margin-top: 30px;
+  margin-left: 40px;
 }
 
 .sort_type_list_2 {
-  background-color: red;
+  justify-content: flex-end;
   width: 130px;
   height: 20px;
+  margin-top: 36px;
+  margin-left: auto;
 }
 
-
 .number_of_hotels {
+  margin-top: 29px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
 }
 
-.sorting_unit {
-  display: flex;
-  flex-grow: 1;
-  width: 593px;
+.sorting_label {
+  margin: 0;
+  margin-top: 32px;
   margin-left: 46px;
 }
 
@@ -971,15 +978,21 @@ input[type="radio"].visually-hidden {
 }
 
 .sort_type_list a {
-  margin-left: 32px;
   border-bottom: 1px dotted #81B3D2;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .sort_type_list .sort_type_list_selected {
-  margin-left: 40px;
-  text-decoration: none;
   color: #81b3d2;
+  border: none;
+}
+
+.sort_type_list li:not(:first-child) {
+  margin-left: 32px;
+}
+
+.sort_type_list li:nth-child(3) {
+  margin-left: 33px;
 }
 
 .sort_type_list a:hover:not(.sort_type_list_selected),
@@ -991,6 +1004,10 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 
+.sort_type_list_2 li:first-child {
+  margin-right: 12px;
+}
+
 .sort_type_list_2 a {
   color: #cacaca;
 }
@@ -999,13 +1016,21 @@ input[type="radio"].visually-hidden {
   color: #81b3d2;
 }
 
-.sort_type_list_2 a:hover:not(.sort_type_list_2_selected),
-.sort_type_list_2 a:focus:not(.sort_type_list_2_selected) {
+.sort_type_list_2 a:hover,
+.sort_type_list_2 a:focus {
   color: #231f20;
 }
 
-.sort_type_list_2 a:active:not(.sort_type_list_2_selected) {
+.sort_type_list_2 a:active {
   color: #81b3d2;
+}
+
+.sort_type_list_2_normal path {
+  fill: #000000;
+}
+
+.sort_type_list_selected path {
+  fill: #81B3D2;
 }
 
 .catalog_list {
@@ -1020,21 +1045,27 @@ input[type="radio"].visually-hidden {
 
 .catalog_list li {
   display: flex;
-  padding: 0 72px;
-  padding-bottom: 30px;
-  margin-top: 30px;
+  padding: 0 73px;
+  padding-bottom: 29px;
+  margin-top: 23px;
   border-bottom: 1px solid #E5E5E5;
 }
 
+.catalog_item > a {
+  height: 90px;
+  margin-top: auto;
+}
+
 .catalog_item_image {
+  height: 90px;
   margin: 0;
 }
 
 .catalog_item_info {
   display: flex;
-  flex-wrap: wrap;
-  width: 363px;
-  min-height: 90px;
+  flex-direction: column;
+  width: 735px;
+  min-height: 98px;
   margin-left: 29px;
   color: #333333;
 }
@@ -1042,23 +1073,35 @@ input[type="radio"].visually-hidden {
 .catalog h3 {
   width: 363px;
   margin: 0;
+}
+
+.catalog_item_heading a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
-.catalog h3:hover,
-.catalog h3:focus {
+.catalog_item_heading a:hover,
+.catalog_item_heading a:focus {
   color: #81b3d2;
 }
 
-.catalog h3:active {
+.catalog_item_heading a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.catalog_item_info span {
+.catalog_item_info .catalog_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.catalog_item_info .catalog_wrapper:first-of-type {
+  margin-top: 8px;
+}
+
+.catalog_item_info .catalog_wrapper:last-of-type {
+  margin-top: auto;
 }
 
 .catalog_item_info .housing_info {
