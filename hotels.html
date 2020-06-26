@@ -30,7 +30,7 @@
             <fieldset name="infrastructure">
               <legend class="infrastructure_title">Инфраструктура:</legend>
               <p class="infrastructure_item">
-                <input class="filter_input visually-hidden" type="checkbox" name="pool" id="pool_field" checked>
+                <input class="filter_input visually-hidden" type="checkbox" name="pool" id="pool_field" checked disabled>
                 <label for="pool_field">Бассейн</label>
               </p>
               <p class="infrastructure_item">
@@ -60,8 +60,8 @@
             <fieldset name="cost_per_day">
               <legend class="cost_per_day_title">Стоимость в сутки (P):</legend>
               <div class="price_controls">
-                <label class="min_price_field">от <input type="text" name="min_price" value="0"></label>
-                <label class="max_price_field">до <input type="text" name="max_price" value="3000"></label>
+                <label class="min_price_field">от <input type="text" name="min_price" placeholder="0"></label>
+                <label class="max_price_field">до <input type="text" name="max_price" placeholder="3000"></label>
               </div>
               <div class="range_controls">
                 <div class="scale">
@@ -70,7 +70,7 @@
                 <div class="range_switch range_switch_min"></div>
                 <div class="range_switch range_switch_max"></div>
               </div>
-              <button class="filter_button" type="submit" name="show">Показать</button>
+              <button class="filter_button" type="submit" name="show" aria-label="Показать варианты жилья по выбранным параметрам">Показать</button>
             </fieldset>
           </form>
         </div>
@@ -84,13 +84,13 @@
           </ul>
           <ul class="sort_type_list_2">
             <li>
-              <a class="sort_type_list_2_normal" href="#"><span class="visually-hidden">По возрастаию</span>
+              <a class="sort_type_list_2_normal" href="#"><span class="visually-hidden">Сортировать жилье по возрастаию цены</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 0L0 10h11z"/>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="sort_type_list_2_selected" href="#"><span class="visually-hidden">По убыванию</span>
+              <a class="sort_type_list_2_selected" href="#"><span class="visually-hidden">Сортировать жилье по убыванию цены</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path d="M5.5 10L0 0h11"/>
                 </svg>
               </a>
@@ -102,11 +102,11 @@
         <h2 class="visually-hidden">Результат поиска</h2>
         <ul class="catalog_list">
           <li class="catalog_item">
-            <a href="catalog_item.html">
-              <p class="catalog_item_image">
+            <p class="catalog_item_image">
+              <a href="catalog_item.html">
                 <img src="img/hotel-1.jpg" width="135" height="90" alt="Гостиница «amara resort & spa»">
-              </p>
-            </a>
+              </a>
+            </p>
             <div class="catalog_item_info">
               <h3 class="catalog_item_heading"><a href="#">amara resort & spa</a></h3>
               <div class="catalog_wrapper">
@@ -118,14 +118,17 @@
                 <a class="hotel_reservation" href="#">Забронировать</a>
               </div>
             </div>
-            <div class="rating">Рейтинг: 8,5</div>
+            <p class="appraisal">
+              <span class="number_of_stars" aria-label="Количество звезд"></span>
+              <span class="rating">Рейтинг: 8,5</span>
+            </p>
           </li>
           <li class="catalog_item">
-            <a href="catalog_item.html">
-              <p class="catalog_item_image">
+            <p class="catalog_item_image">
+              <a href="catalog_item.html">
                 <img src="img/hotel-2.jpg" width="135" height="90" alt="Мотель «desert quail inn»">
-              </p>
-            </a>
+              </a>
+            </p>
             <div class="catalog_item_info">
               <h3 class="catalog_item_heading"><a href="#">desert quail inn</a></h3>
               <div class="catalog_wrapper">
@@ -137,14 +140,17 @@
                 <a class="hotel_reservation" href="#">Забронировать</a>
               </div>
             </div>
-            <div class="rating">Рейтинг: 8,9</div>
+            <p class="appraisal">
+              <span class="number_of_stars"></span>
+              <span class="rating">Рейтинг: 8,9</span>
+            </p>
           </li>
           <li class="catalog_item">
-            <a href="catalog_item.html">
-              <p class="catalog_item_image">
+            <p class="catalog_item_image">
+              <a href="catalog_item.html">
                 <img src="img/hotel-3.jpg" width="135" height="90" alt="Мотель «villas at poco diablo»">
-              </p>
-            </a>
+              </a>
+            </p>
             <div class="catalog_item_info">
               <h3 class="catalog_item_heading"><a href="#">villas at poco diablo</a></h3>
               <div class="catalog_wrapper">
@@ -156,8 +162,11 @@
                 <a class="hotel_reservation" href="#">Забронировать</a>
               </div>
             </div>
-            <div class="rating">Рейтинг: 9,2</div>
-        </li>
+            <p class="appraisal">
+              <span class="number_of_stars"></span>
+              <span class="rating">Рейтинг: 9,2</span>
+            </p>
+          </li>
         </ul>
       </section>
     </main>

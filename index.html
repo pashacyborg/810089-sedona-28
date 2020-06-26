@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>City of Sedona</title>
   </head>
-  <body>
+  <body class="main_page">
     <header class="main_header container">
       <nav class="main_navigation">
         <a class="main_header_logo" href="index.html">
@@ -98,7 +98,7 @@
           <div class="search_item whole_field">
             <label for="arrival_date_field">Дата заезда:</label>
             <input type="text" name="arrival_date" id="arrival_date_field" placeholder="24 апреля 2017">
-            <button class="open_calendar" type="button" aria-label="открыть календарь">
+            <button class="open_calendar" type="button" aria-label="выбрать дату заезда">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
               <g id="calendar_1_">
@@ -125,7 +125,7 @@
           <div class="search_item whole_field">
             <label for="departure_date_field">Дата выезда:</label>
             <input type="text" name="departure_date" id="departure_date_field" placeholder="4 июля 2017">
-            <button class="open_calendar" type="button" aria-label="открыть календарь">
+            <button class="open_calendar" type="button" aria-label="выбрать дату выезда">
               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="22px" viewBox="0 0 21 22" enable-background="new 0 0 21 22" xml:space="preserve">
               <g id="calendar_1_">
@@ -152,20 +152,36 @@
           <div class="search_item one_third_whole">
             <label for="amount_of_adult_field">Взрослые:</label>
             <div class="one_third_whole_field">
-              <button class="button_less" type="button"></button>
-              <input type="number" name="amount_of_adult" id="amount_of_adult_field" placeholder="0" aria-label="Количество взрослых">
-              <button class="button_more" type="button"></button>
+              <button class="button_less" type="button" aria-label="уменьшить количество взрослых">
+                <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3"/>
+                </svg>
+              </button>
+              <input type="text" name="amount_of_adult" id="amount_of_adult_field" placeholder="2" aria-label="Количество взрослых">
+              <button class="button_more" type="button" aria-label="увеличить количество взрослых">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="search_item one_third_whole">
             <label for="amount_of_children_field">Дети:</label>
             <div class="one_third_whole_field">
-              <button class="button_less" type="button"></button>
-              <input type="number" name="amount_of_children" id="amount_of_children_field" placeholder="2" aria-label="Количество детей">
-              <button class="button_more" type="button"></button>
+              <button class="button_less" type="button" aria-label="уменьшить количество детей">
+                <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="12" height="3"/>
+                </svg>
+              </button>
+              <input type="text" name="amount_of_children" id="amount_of_children_field" placeholder="0" aria-label="Количество детей">
+              <button class="button_more" type="button" aria-label="увеличить количество детей">
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"/>
+                </svg>
+              </button>
             </div>
           </div>
-          <button type="submit" class="button hotel_search">Найти</button>
+          <button type="submit" class="button hotel_search" aria-label="поиск жилья по выбранным параметрам">Найти</button>
         </form>
       </section>
       <section class="modal modal_map">
