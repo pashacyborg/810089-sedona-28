@@ -505,6 +505,12 @@ input[type="radio"].visually-hidden {
   border: 2px solid var(--color-gray-type6);
 }
 
+.modal_search_form input::placeholder {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+}
+
 .whole_field input {
   box-sizing: border-box;
   width: 346px;
@@ -609,6 +615,7 @@ input[type="radio"].visually-hidden {
 
 .main_page .main_footer {
   margin-top: -126px;
+  box-shadow: none;
 }
 
 .contact_us {
@@ -620,9 +627,9 @@ input[type="radio"].visually-hidden {
   padding-left: 73px;
 }
 
-.contact_us p {
+/* .contact_us p {
   margin: 0;
-}
+} */
 
 .contact_us .hashtag {
   margin-top: 23px;
@@ -894,9 +901,15 @@ input[type="radio"].visually-hidden {
   height: 30px;
   margin: 0;
   color: inherit;
-  font: inherit;
   background: none;
   border: none;
+}
+
+.price_controls input::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
 }
 
 .range_controls {
