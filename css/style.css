@@ -39,7 +39,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #333333;
+  color: var(--color-light-black);
   text-transform: uppercase;
 
   background-color: var(--color-gray-type1);
@@ -80,7 +80,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  color: #000000;
+  color: var(--color-black);
   background-color: var(--color-white);
 }
 
@@ -171,7 +171,7 @@ input[type="radio"].visually-hidden {
   margin-right: 380px;
   font-size: 21px;
   font-weight: 700;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .entry p {
@@ -264,7 +264,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
-  color: #000000;
+  color: var(--color-black);
 }
 
 .advantages_housing_item:first-child h3,
@@ -303,7 +303,7 @@ input[type="radio"].visually-hidden {
   width: 75px;
   height: 72px;
   margin-left: -37.5px;
-  background-image: url("../img/advantages_housing_icon-1.svg");
+  background-image: url("../img/advantages_housing_icon_1.svg");
   background-repeat: no-repeat;
 }
 
@@ -315,7 +315,7 @@ input[type="radio"].visually-hidden {
   width: 75px;
   height: 70px;
   margin-left: -37px;
-  background-image: url("../img/advantages_housing_icon-3.svg");
+  background-image: url("../img/advantages_housing_icon_3.svg");
   background-repeat: no-repeat;
 }
 
@@ -327,7 +327,7 @@ input[type="radio"].visually-hidden {
   width: 64px;
   height: 77px;
   margin-left: -32px;
-  background-image: url("../img/advantages_housing_icon-2.svg");
+  background-image: url("../img/advantages_housing_icon_2.svg");
   background-repeat: no-repeat;
 }
 
@@ -407,6 +407,7 @@ input[type="radio"].visually-hidden {
   width: 568px;
   padding: 29px 75px 32px 75px;
   background-color: var(--color-brown);
+  vertical-align: baseline;
 }
 
 .show_form:hover,
@@ -627,9 +628,9 @@ input[type="radio"].visually-hidden {
   padding-left: 73px;
 }
 
-/* .contact_us p {
+.contact_us p {
   margin: 0;
-} */
+}
 
 .contact_us .hashtag {
   margin-top: 23px;
@@ -681,21 +682,21 @@ input[type="radio"].visually-hidden {
   content: "";
   width: 17px;
   height: 15px;
-  background-image: url("../img/twitter-icon.svg")
+  background-image: url("../img/twitter_icon.svg")
 }
 
 .social_networks_list .facebook::before {
   content: "";
   width: 12px;
   height: 22px;
-  background-image: url("../img/facebook-icon.svg")
+  background-image: url("../img/facebook_icon.svg")
 }
 
 .social_networks_list .youtube::before {
   content: "";
   width: 20px;
   height: 16px;
-  background-image: url("../img/youtube-icon.svg")
+  background-image: url("../img/youtube_icon.svg")
 }
 
 .twitter:focus,
@@ -832,26 +833,26 @@ input[type="radio"].visually-hidden {
   left: 0px;
   width: 23px;
   height: 23px;
-  background-image: url("../img/checkbox-off.svg");
+  background-image: url("../img/checkbox_off.svg");
 }
 
 
 .filter_input:checked + label::before {
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.svg");
+  background-image: url("../img/checkbox_on.svg");
 }
 
 .filter_input:disabled + label::before {
   width: 23px;
   height: 23px;
-  background-image: url("../img/checkbox-disabled.svg")
+  background-image: url("../img/checkbox_disabled.svg")
 }
 
 .filter_input:checked:disabled + label::before {
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-checked-disabled.svg");
+  background-image: url("../img/checkbox_checked_disabled.svg");
 }
 
 .cost_per_day_title {
@@ -909,7 +910,7 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .range_controls {
@@ -1208,6 +1209,7 @@ input[type="radio"].visually-hidden {
   top: 5px;
   width: 90px;
   height: 17px;
+  margin: 0;
   background-image: url("../img/star_icon.svg");
   background-size: 23px 17px;
 }
