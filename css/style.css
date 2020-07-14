@@ -607,6 +607,7 @@ input[type="radio"].visually-hidden {
 
 .main_footer {
   position: relative;
+  z-index: 3;
   display: flex;
   min-height: 126px;
   line-height: 26px;
@@ -1232,4 +1233,53 @@ input[type="radio"].visually-hidden {
   padding: 3px 12px 3px 15px;
   color: var(--color-dark-gray-type2);
   background-color: var(--color-gray-type1);
+}
+
+.modal_show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-87px);
+  }
+
+  70% {
+    transform: translateY(40px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal_error {
+  animation: shake 0.6s;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
