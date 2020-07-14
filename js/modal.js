@@ -11,6 +11,9 @@ popup.classList.add("visually-hidden");
 
 openClose.addEventListener("click", function(event) {
   event.preventDefault();
+  if (popup.classList.contains("modal_error")) {
+    popup.classList.remove("modal_error");
+  }
   popup.classList.toggle("visually-hidden");
   popup.classList.toggle("modal_show");
 });
@@ -29,6 +32,9 @@ window.addEventListener("keydown", function(event) {
       if (!popup.classList.contains("visually-hidden")) {
         popup.classList.add("visually-hidden");
         popup.classList.remove("modal_show");
+        if (popup.classList.contains("modal_error")) {
+          popup.classList.remove("modal_error");
+        }
       }
   }
 });

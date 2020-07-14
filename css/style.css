@@ -422,6 +422,7 @@ input[type="radio"].visually-hidden {
 
 .modal_search {
   position: relative;
+  z-index: 40;
   font-size: 14px;
   font-weight: 700;
   line-height: 26px;
@@ -601,13 +602,27 @@ input[type="radio"].visually-hidden {
   background-color: var(--color-blue-type4);
 }
 
+.modal_map {
+  position: relative;
+  min-height: 594px;
+}
+
+.modal_map_iframe {
+  position: relative;
+  z-index: 20;
+  border: 0;
+}
+
 .hotel_search_map {
+  position: absolute;
+  z-index: 10;
+  top: 0;
   margin: 0;
 }
 
 .main_footer {
   position: relative;
-  z-index: 3;
+  z-index: 30;
   display: flex;
   min-height: 126px;
   line-height: 26px;
@@ -1236,8 +1251,7 @@ input[type="radio"].visually-hidden {
 }
 
 .modal_show {
-  display: block;
-  animation: bounce 0.6s;
+  animation: bounce 0.4s;
 }
 
 @keyframes bounce {
